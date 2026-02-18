@@ -129,8 +129,8 @@ def signed_req(method, path, params=None):
 
     return r.json()
 
-def round_step(v, step):
-    return math.floor(v / step) * step
+def round_step(value, step):
+    return float(f"{math.floor(value / step) * step:.8f}")
 
 # ================== BINANCE ==================
 def get_symbol_filters():
